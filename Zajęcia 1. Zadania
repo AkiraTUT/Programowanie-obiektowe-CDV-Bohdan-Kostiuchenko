@@ -1,0 +1,162 @@
+1)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string password = "";
+
+        while (password != "admin123")
+        {
+            Console.Write("Podaj hasło: ");
+            password = Console.ReadLine();
+        }
+
+        Console.WriteLine("Zalogowano pomyślnie!");
+    }
+}
+2)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int number;
+
+        do
+        {
+            Console.Write("Podaj liczbę większą od zera: ");
+            number = int.Parse(Console.ReadLine());
+        }
+        while (number <= 0);
+
+        Console.WriteLine("Poprawna liczba!");
+    }
+}
+3)
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] cities = { "Warszawa", "Kraków", "Gdańsk", "Wrocław", "Poznań" };
+
+        foreach (string city in cities)
+        {
+            Console.WriteLine(city);
+        }
+    }
+}
+4)
+using System;
+
+class Osoba
+{
+    public string Imie;
+    public int Wiek;
+
+    public void PrzedstawSie()
+    {
+        Console.WriteLine($"Cześć, mam na imię {Imie} i mam {Wiek} lat.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Osoba o1 = new Osoba { Imie = "Anna", Wiek = 20 };
+        Osoba o2 = new Osoba { Imie = "Jan", Wiek = 25 };
+        Osoba o3 = new Osoba { Imie = "Kasia", Wiek = 30 };
+
+        o1.PrzedstawSie();
+        o2.PrzedstawSie();
+        o3.PrzedstawSie();
+    }
+}
+5)
+using System;
+
+class KontoBankowe
+{
+    private double saldo;
+
+    public void Wplata(double kwota)
+    {
+        saldo += kwota;
+    }
+
+    public void Wyplata(double kwota)
+    {
+        if (kwota <= saldo)
+        {
+            saldo -= kwota;
+            Console.WriteLine("Wypłata wykonana.");
+        }
+        else
+        {
+            Console.WriteLine("Brak wystarczających środków.");
+        }
+    }
+
+    public double PobierzSaldo()
+    {
+        return saldo;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        KontoBankowe konto = new KontoBankowe();
+        konto.Wplata(500);
+        konto.Wyplata(200);
+        konto.Wyplata(400);
+
+        Console.WriteLine($"Saldo: {konto.PobierzSaldo()}");
+    }
+}
+6)
+using System;
+
+class Zwierze
+{
+    public void Jedz()
+    {
+        Console.WriteLine("Zwierzę je");
+    }
+}
+
+class Pies : Zwierze
+{
+    public void Szczekaj()
+    {
+        Console.WriteLine("Hau hau!");
+    }
+}
+
+class Kot : Zwierze
+{
+    public void Miaucz()
+    {
+        Console.WriteLine("Miau!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Pies pies = new Pies();
+        pies.Jedz();
+        pies.Szczekaj();
+
+        Kot kot = new Kot();
+        kot.Jedz();
+        kot.Miaucz();
+    }
+}
