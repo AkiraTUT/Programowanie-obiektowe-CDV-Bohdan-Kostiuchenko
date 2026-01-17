@@ -1,0 +1,214 @@
+1)
+using System;
+
+class Zwierze
+{
+    public virtual void DajGlos()
+    {
+        Console.WriteLine("Zwierzę wydaje dźwięk");
+    }
+}
+
+class Pies : Zwierze
+{
+    public override void DajGlos()
+    {
+        Console.WriteLine("Hau hau!");
+    }
+}
+
+class Kot : Zwierze
+{
+    public override void DajGlos()
+    {
+        Console.WriteLine("Miau!");
+    }
+}
+
+class Krowa : Zwierze
+{
+    public override void DajGlos()
+    {
+        Console.WriteLine("Muuu!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Zwierze[] zwierzeta =
+        {
+            new Pies(),
+            new Kot(),
+            new Krowa()
+        };
+
+        foreach (Zwierze z in zwierzeta)
+        {
+            z.DajGlos();
+        }
+    }
+}
+2)
+using System;
+using System.Collections.Generic;
+
+abstract class Pojazd
+{
+    public string Marka { get; set; }
+    public abstract void UruchomSilnik();
+    public void Info() => Console.WriteLine($"Pojazd marki {Marka}");
+}
+
+class Samochod : Pojazd
+{
+    public override void UruchomSilnik() => Console.WriteLine("Silnik samochodu został uruchomiony");
+}
+
+class Motocykl : Pojazd
+{
+    public override void UruchomSilnik() => Console.WriteLine("Motocykl odpala z głośnym dźwiękiem");
+}
+
+class Ciezarowka : Pojazd
+{
+    public override void UruchomSilnik() => Console.WriteLine("Ciężarówka: Silnik diesla huczy");
+}
+
+class Program
+{
+    static void Main()
+    {
+        List<Pojazd> pojazdy = new List<Pojazd>
+        {
+            new Samochod { Marka = "Toyota" },
+            new Motocykl { Marka = "Honda" },
+            new Ciezarowka { Marka = "Volvo" }
+        };
+
+        foreach (var p in pojazdy)
+        {
+            p.Info();
+            p.UruchomSilnik();
+        }
+    }
+}
+3)
+using System;
+
+interface IDrukowalne
+{
+    void Drukuj();
+}
+
+class Dokument : IDrukowalne
+{
+    public void Drukuj()
+    {
+        Console.WriteLine("Drukowanie dokumentu tekstowego...");
+    }
+}
+
+class Zdjecie : IDrukowalne
+{
+    public void Drukuj()
+    {
+        Console.WriteLine("Drukowanie zdjęcia w wysokiej rozdzielczości...");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        IDrukowalne[] elementy = 
+        { 
+            new Dokument(), 
+            new Zdjecie() 
+        };
+
+        foreach (IDrukowalne e in elementy)
+        {
+            e.Drukuj();
+        }
+    }
+}
+4)
+using System;
+using System.Collections.Generic;
+
+abstract class Zwierze
+{
+    public string Nazwa { get; set; }
+    public abstract void WydajDzwiek();
+}
+
+interface IKarmione
+{
+    void Jedz();
+}
+
+interface ITrenowane
+{
+    void Trenuj();
+}
+
+class Lew : Zwierze, IKarmione, ITrenowane
+{
+    public override void WydajDzwiek() => Console.WriteLine("Lew: Roooar!");
+    public void Jedz() => Console.WriteLine("Lew je mięso.");
+    public void Trenuj() => Console.WriteLine("Lew wykonuje skok przez obręcz.");
+}
+
+class Slon : Zwierze, IKarmione
+{
+    public override void WydajDzwiek() => Console.WriteLine("Słoń: Truuu!");
+    public void Jedz() => Console.WriteLine("Słoń je trawę.");
+}
+
+class Papuga : Zwierze, IKarmione, ITrenowane
+{
+    public override void WydajDzwiek() => Console.WriteLine("Papuga: Witaj!");
+    public void Jedz() => Console.WriteLine("Papuga je ziarno.");
+    public void Trenuj() => Console.WriteLine("Papuga powtarza sztuczki słowne.");
+}
+
+class Tygrys : Zwierze, IKarmione, ITrenowane
+{
+    public override void WydajDzwiek() => Console.WriteLine("Tygrys: GRRR!");
+    public void Jedz() => Console.WriteLine("Tygrys je surowe mięso.");
+    public void Trenuj() => Console.WriteLine("Tygrys biega po kładce.");
+}
+
+class Program
+{
+    static void Main()
+    {
+        List<Zwierze> zwierzeta = new List<Zwierze>
+        {
+            new Lew { Nazwa = "Simba" },
+            new Slon { Nazwa = "Dumbo" },
+            new Papuga { Nazwa = "Polly" },
+            new Tygrys { Nazwa = "Shere Khan" }
+        };
+
+        foreach (Zwierze z in zwierzeta)
+        {
+            Console.WriteLine($"Imię: {z.Nazwa}");
+            z.WydajDzwiek();
+
+            if (z is IKarmione karmione)
+            {
+                karmione.Jedz();
+            }
+
+            if (z is ITrenowane trenowane)
+            {
+                trenowane.Trenuj();
+            }
+
+            Console.WriteLine("---------------------------");
+        }
+    }
+}
