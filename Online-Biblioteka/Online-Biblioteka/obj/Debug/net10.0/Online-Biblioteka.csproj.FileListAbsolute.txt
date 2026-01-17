@@ -1,0 +1,14 @@
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\bin\Debug\net10.0\Online-Biblioteka.exe
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\bin\Debug\net10.0\Online-Biblioteka.deps.json
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\bin\Debug\net10.0\Online-Biblioteka.runtimeconfig.json
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\bin\Debug\net10.0\Online-Biblioteka.dll
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\bin\Debug\net10.0\Online-Biblioteka.pdb
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\Online-Biblioteka.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\Online-Biblioteka.AssemblyInfoInputs.cache
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\Online-Biblioteka.AssemblyInfo.cs
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\Online-Biblioteka.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\Online-Biblioteka.dll
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\refint\Online-Biblioteka.dll
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\Online-Biblioteka.pdb
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\Online-Biblioteka.genruntimeconfig.cache
+D:\Visual Studio Projects\Online-Biblioteka\Online-Biblioteka\obj\Debug\net10.0\ref\Online-Biblioteka.dll

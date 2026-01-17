@@ -1,0 +1,74 @@
+[
+  {
+    "$type": "book",
+    "Author": "Andrzej Sapkowski",
+    "PageCount": 320,
+    "Id": 1,
+    "Title": "Wiedźmin: Ostatnie życzenie",
+    "IsBorrowed": false
+  },
+  {
+    "$type": "book",
+    "Author": "Adam Mickiewicz",
+    "PageCount": 450,
+    "Id": 2,
+    "Title": "Pan Tadeusz",
+    "IsBorrowed": true
+  },
+  {
+    "$type": "audiobook",
+    "Narrator": "Krzysztof Gosztyła",
+    "DurationInHours": 12.5,
+    "Id": 3,
+    "Title": "Solaris",
+    "IsBorrowed": false
+  },
+  {
+    "$type": "book",
+    "Author": "Stephen King",
+    "PageCount": 1100,
+    "Id": 4,
+    "Title": "To",
+    "IsBorrowed": false
+  },
+  {
+    "$type": "book",
+    "Author": "J.R.R. Tolkien",
+    "PageCount": 400,
+    "Id": 5,
+    "Title": "Hobbit",
+    "IsBorrowed": false
+  },
+  {
+    "$type": "audiobook",
+    "Narrator": "Jan Peszek",
+    "DurationInHours": 8.2,
+    "Id": 6,
+    "Title": "Mały Książę",
+    "IsBorrowed": false
+  },
+  {
+    "$type": "book",
+    "Author": "George Orwell",
+    "PageCount": 300,
+    "Id": 7,
+    "Title": "Rok 1984",
+    "IsBorrowed": true
+  },
+  {
+    "$type": "book",
+    "Author": "Hanna Krall",
+    "PageCount": 150,
+    "Id": 8,
+    "Title": "Zdążyć przed Panem Bogiem",
+    "IsBorrowed": false
+  },
+  {
+    "$type": "audiobook",
+    "Narrator": "Maja Ostaszewska",
+    "DurationInHours": 10.0,
+    "Id": 9,
+    "Title": "Bieguni",
+    "IsBorrowed": false
+  }
+]
